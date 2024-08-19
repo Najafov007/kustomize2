@@ -1,11 +1,9 @@
-FROM tomcat:latest
-
-RUN apt-get update && apt-get install -y net-tools tree vim 
-RUN rm -rf /var/lib/apt/lists/* && apt-get clean && apt-get purge
-
-RUN echo "export JAVA_OPTS=\"-Dapp.env=staging\"" > /usr/local/tomcat/bin/setenv.sh
-COPY pkg/demo.war /usr/local/tomcat/webapps/demo.war
-
-EXPOSE 8080
-CMD ["catalina.sh", "run"]
+FROM python:3.9-slim-buster
+WORKDIR /app
+COPY ./requirements.txt .
+RUN pip3 install --no-cache-dir -r requirements.txt
+COPY . .
+ENV FLASK_RUN_HOST=0.0.0.0
+EXPOSE 5000
+CMD ["flask", "run"]
 

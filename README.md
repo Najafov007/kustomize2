@@ -1,90 +1,93 @@
-# Demo Java Web App
+# My Project
 
-[![BoltOps Badge](https://img.boltops.com/boltops/badges/boltops-badge.png)](https://www.boltops.com)
 
-Simple java project demos how to build a war file to be deployed on a Tomcat server.
 
-## Build
+## Getting started
 
-The build script uses `mvn package` to produce a demo.war file and then bundles it with a Docker image that runs Tomcat.  Usage:
+To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-    bin/build
+Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
-## What happened
+## Add your files
 
-* mvn package was ran and the `target/demo.war` was moved into `pkg/demo.war`
-* a docker image was built which copied the `pkg/demo.war` to `/usr/local/tomcat/webapps/demo.war`. Check out the [Dockerfile](Dockerfile) for details.
+- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
+- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
-Here's an example of some things to check after running the build script:
+```
+cd existing_repo
+git remote add origin https://gitlab.com/main3022942/my-project.git
+git branch -M main
+git push -uf origin main
+```
 
-    $ ls pkg/demo.war
-    pkg/demo.war
-    $ docker images
-    REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-    demo-java           latest              88092dfb7325        6 minutes ago       591MB
-    tomcat              8.5                 a92c139758db        2 weeks ago         558MB
-    $
+## Integrate with your tools
 
-## Source Url Mapping
+- [ ] [Set up project integrations](https://gitlab.com/main3022942/my-project/-/settings/integrations)
 
-The app is a small demo of a java servlet app.  Here's the source code to url mapping:
+## Collaborate with your team
 
-Source | Url
---- | ---
-src/main/java/Hello.java | localhost:8080/demo/Hello
-src/main/webapp/index.jsp | localhost:8080/demo/index.jsp
+- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
+- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
+- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
+- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
+- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
-## Run
+## Test and Deploy
 
-Here are the summarized commands to run and test that Tomcat is serving the war file:
+Use the built-in continuous integration in GitLab.
 
-    docker run --rm -p 8080:8080 -d demo-java
-    docker exec -ti $(docker ps -ql) bash
-    curl localhost:8080/demo/Hello
-    curl localhost:8080/demo/index.jsp
-    exit
-    docker stop $(docker ps -ql)
+- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
+- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
+- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
+- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
+- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
-Then you can hit the the [HOSTNAME]:8080/demo/Hello and to verify that Tomcat is servering the demo.war file.  You should see an html page that says "Hello World".  The output should look similar:
+***
 
-    $ docker run --rm -p 8080:8080 -d demo-java
-    2ba7323481fa5c4068b90f2edf38555d9551303e9c2e4c27137ab0545688555b
-    $ docker exec -ti $(docker ps -ql) bash
-    root@2ba7323481fa:/usr/local/tomcat# curl localhost:8080/demo/Hello
-    <h1>Hello World Hello.java</h1>
-    root@2ba7323481fa:/usr/local/tomcat# curl localhost:8080/demo/index.jsp
-    <html>
-    <body>
-    <h2>Hello World index.jsp!</h2>
-    </body>
-    </html>
-    root@2ba7323481fa:/usr/local/tomcat# exit
-    exit
-    $ docker stop $(docker ps -ql)
-    2ba7323481fa
-    $ docker ps -a
-    CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-    $
+# Editing this README
 
-## Usage with UFO
+When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
 
-The ufo branch of this project provides an additional demo that takes the war artifact, builds a Docker image and deploys it to ECS.  For details please check out that branch: [ufo](https://github.com/tongueroo/demo-java/tree/ufo). For more details on ufo check out the [official ufo docs](http://ufoships.com/).
+## Suggestions for a good README
 
-## Initial Generation
+Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-Here are some notes on the initial generation of the project. The initial files and project structure was generated with the `mvn archetype:generate` command.  Note, you do not have to run the command it is just noted here for posterity.  More info: [Creating a webapp](https://maven.apache.org/plugins-archives/maven-archetype-plugin-1.0-alpha-7/examples/webapp.html) and [Introduction to the Standard Directory Layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html).
+## Name
+Choose a self-explaining name for your project.
 
-Change were made like adding a simple [Hello.java](src/main/java/Hello.java) Serlvet class.
+## Description
+Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-The original command was:
+## Badges
+On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
 
-    mvn archetype:generate \
-      -DinteractiveMode=false \
-      -DgroupId=com.domain \
-      -DartifactId=demo \
-      -DarchetypeArtifactId=maven-archetype-webapp
+## Visuals
+Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
-## Dependencies
+## Installation
+Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-* docker: `brew install docker`
-* maven: `brew install maven`
+## Usage
+Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+
+## Support
+Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+
+## Roadmap
+If you have ideas for releases in the future, it is a good idea to list them in the README.
+
+## Contributing
+State if you are open to contributions and what your requirements are for accepting them.
+
+For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+
+You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+
+## Authors and acknowledgment
+Show your appreciation to those who have contributed to the project.
+
+## License
+For open source projects, say how it is licensed.
+
+## Project status
+If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
