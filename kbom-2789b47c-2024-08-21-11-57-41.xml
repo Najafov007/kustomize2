@@ -1,0 +1,3608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.5" serialNumber="urn:uuid:1214a0c2-6491-4549-bedf-173ee145f323" version="1">
+  <metadata>
+    <timestamp>2024-08-21T11:57:54Z</timestamp>
+    <tools>
+      <tool>
+        <vendor>RAD Security</vendor>
+        <name>unknown</name>
+        <version>unknown</version>
+      </tool>
+    </tools>
+    <component bom-ref="pkg:k8s/k8s.io%2Fkubernetes@1.30.2" type="platform">
+      <name>k8s.io/kubernetes</name>
+      <version>1.30.2</version>
+      <properties>
+        <property name="cdx:k8s:component:type">cluster</property>
+        <property name="cdx:k8s:component:name">do-nyc3-k8s-1</property>
+        <property name="rad:kbom:k8s:cluster:nodes">1</property>
+        <property name="rad:kbom:k8s:cluster:location:region">nyc3</property>
+      </properties>
+    </component>
+  </metadata>
+  <components>
+    <component bom-ref="fcb5d3005f98081f" type="platform">
+      <name>pool-37ti9u4a1-bpt78</name>
+      <properties>
+        <property name="cdx:k8s:component:type">node</property>
+        <property name="cdx:k8s:component:name">pool-37ti9u4a1-bpt78</property>
+        <property name="rad:kbom:k8s:node:osImage">Debian GNU/Linux 12 (bookworm)</property>
+        <property name="rad:kbom:k8s:node:arch">amd64</property>
+        <property name="rad:kbom:k8s:node:kernel">6.1.0-22-amd64</property>
+        <property name="rad:kbom:k8s:node:bootId">deb5aa50-c55c-481a-b454-1446abcb7e35</property>
+        <property name="rad:kbom:k8s:node:type">s-2vcpu-4gb-120gb-intel</property>
+        <property name="rad:kbom:k8s:node:operatingSystem">linux</property>
+        <property name="rad:kbom:k8s:node:machineId">a1dc562048fd49568194341c483ed31f</property>
+        <property name="rad:kbom:k8s:node:hostname">pool-37ti9u4a1-bpt78</property>
+        <property name="rad:kbom:k8s:node:containerRuntimeVersion">containerd://1.6.31</property>
+        <property name="rad:kbom:k8s:node:kubeletVersion">v1.30.2</property>
+        <property name="rad:kbom:k8s:node:kubeProxyVersion">v1.30.2</property>
+        <property name="rad:kbom:k8s:node:capacity:cpu">2</property>
+        <property name="rad:kbom:k8s:node:capacity:memory">4009168Ki</property>
+        <property name="rad:kbom:k8s:node:capacity:pods">110</property>
+        <property name="rad:kbom:k8s:node:capacity:ephemeralStorage">123679096Ki</property>
+        <property name="rad:kbom:k8s:node:allocatable:cpu">1900m</property>
+        <property name="rad:kbom:k8s:node:allocatable:memory">3110Mi</property>
+        <property name="rad:kbom:k8s:node:allocatable:pods">110</property>
+        <property name="rad:kbom:k8s:node:allocatable:ephemeralStorage">113982654685</property>
+      </properties>
+    </component>
+    <component bom-ref="pkg:oci/kube-proxy@sha256%3A8a44c6e094af3dea3de57fa967e201608a358a3bd8b4e3f31ab905bbe4108aec?repository_url=registry.k8s.io%2Fkube-proxy&amp;tag=v1.30.2" type="container">
+      <name>registry.k8s.io/kube-proxy</name>
+      <version>sha256:8a44c6e094af3dea3de57fa967e201608a358a3bd8b4e3f31ab905bbe4108aec</version>
+      <purl>pkg:oci/kube-proxy@sha256%3A8a44c6e094af3dea3de57fa967e201608a358a3bd8b4e3f31ab905bbe4108aec?repository_url=registry.k8s.io%2Fkube-proxy&amp;tag=v1.30.2</purl>
+      <properties>
+        <property name="cdx:k8s:component:type">container</property>
+        <property name="cdx:k8s:component:name">registry.k8s.io/kube-proxy</property>
+        <property name="rad:kbom:pkg:type">oci</property>
+        <property name="rad:kbom:pkg:name">registry.k8s.io/kube-proxy</property>
+        <property name="rad:kbom:pkg:version">v1.30.2</property>
+        <property name="rad:kbom:pkg:digest">sha256:8a44c6e094af3dea3de57fa967e201608a358a3bd8b4e3f31ab905bbe4108aec</property>
+      </properties>
+    </component>
+    <component bom-ref="pkg:oci/cilium@sha256%3A0a1bcd2859c6d18d60dba6650cca8c707101716a3e47b126679040cbd621c031?repository_url=docker.io%2Fcilium%2Fcilium&amp;tag=v1.14.10" type="container">
+      <name>docker.io/cilium/cilium</name>
+      <version>sha256:0a1bcd2859c6d18d60dba6650cca8c707101716a3e47b126679040cbd621c031</version>
+      <purl>pkg:oci/cilium@sha256%3A0a1bcd2859c6d18d60dba6650cca8c707101716a3e47b126679040cbd621c031?repository_url=docker.io%2Fcilium%2Fcilium&amp;tag=v1.14.10</purl>
+      <properties>
+        <property name="cdx:k8s:component:type">container</property>
+        <property name="cdx:k8s:component:name">docker.io/cilium/cilium</property>
+        <property name="rad:kbom:pkg:type">oci</property>
+        <property name="rad:kbom:pkg:name">docker.io/cilium/cilium</property>
+        <property name="rad:kbom:pkg:version">v1.14.10</property>
+        <property name="rad:kbom:pkg:digest">sha256:0a1bcd2859c6d18d60dba6650cca8c707101716a3e47b126679040cbd621c031</property>
+      </properties>
+    </component>
+    <component bom-ref="pkg:oci/csi-node-driver-registrar@sha256%3Af25af73ee708ff9c82595ae99493cdef9295bd96953366cddf36305f82555dac?repository_url=registry.k8s.io%2Fsig-storage%2Fcsi-node-driver-registrar&amp;tag=v2.10.1" type="container">
+      <name>registry.k8s.io/sig-storage/csi-node-driver-registrar</name>
+      <version>sha256:f25af73ee708ff9c82595ae99493cdef9295bd96953366cddf36305f82555dac</version>
+      <purl>pkg:oci/csi-node-driver-registrar@sha256%3Af25af73ee708ff9c82595ae99493cdef9295bd96953366cddf36305f82555dac?repository_url=registry.k8s.io%2Fsig-storage%2Fcsi-node-driver-registrar&amp;tag=v2.10.1</purl>
+      <properties>
+        <property name="cdx:k8s:component:type">container</property>
+        <property name="cdx:k8s:component:name">registry.k8s.io/sig-storage/csi-node-driver-registrar</property>
+        <property name="rad:kbom:pkg:type">oci</property>
+        <property name="rad:kbom:pkg:name">registry.k8s.io/sig-storage/csi-node-driver-registrar</property>
+        <property name="rad:kbom:pkg:version">v2.10.1</property>
+        <property name="rad:kbom:pkg:digest">sha256:f25af73ee708ff9c82595ae99493cdef9295bd96953366cddf36305f82555dac</property>
+      </properties>
+    </component>
+    <component bom-ref="pkg:oci/do-csi-plugin@sha256%3A308ed578f2f94d982a0023db326dd9adeededf73a80736c06219235e3b1a8113?repository_url=docker.io%2Fdigitalocean%2Fdo-csi-plugin&amp;tag=v4.11.0" type="container">
+      <name>docker.io/digitalocean/do-csi-plugin</name>
+      <version>sha256:308ed578f2f94d982a0023db326dd9adeededf73a80736c06219235e3b1a8113</version>
+      <purl>pkg:oci/do-csi-plugin@sha256%3A308ed578f2f94d982a0023db326dd9adeededf73a80736c06219235e3b1a8113?repository_url=docker.io%2Fdigitalocean%2Fdo-csi-plugin&amp;tag=v4.11.0</purl>
+      <properties>
+        <property name="cdx:k8s:component:type">container</property>
+        <property name="cdx:k8s:component:name">docker.io/digitalocean/do-csi-plugin</property>
+        <property name="rad:kbom:pkg:type">oci</property>
+        <property name="rad:kbom:pkg:name">docker.io/digitalocean/do-csi-plugin</property>
+        <property name="rad:kbom:pkg:version">v4.11.0</property>
+        <property name="rad:kbom:pkg:digest">sha256:308ed578f2f94d982a0023db326dd9adeededf73a80736c06219235e3b1a8113</property>
+      </properties>
+    </component>
+    <component bom-ref="pkg:oci/do-agent@sha256%3A3e7fd2623ffce0bce5224d7c220564234a77bf9b9f56cc5d5321203191a8a98e?repository_url=docker.io%2Fdigitalocean%2Fdo-agent&amp;tag=3.16.7" type="container">
+      <name>docker.io/digitalocean/do-agent</name>
+      <version>sha256:3e7fd2623ffce0bce5224d7c220564234a77bf9b9f56cc5d5321203191a8a98e</version>
+      <purl>pkg:oci/do-agent@sha256%3A3e7fd2623ffce0bce5224d7c220564234a77bf9b9f56cc5d5321203191a8a98e?repository_url=docker.io%2Fdigitalocean%2Fdo-agent&amp;tag=3.16.7</purl>
+      <properties>
+        <property name="cdx:k8s:component:type">container</property>
+        <property name="cdx:k8s:component:name">docker.io/digitalocean/do-agent</property>
+        <property name="rad:kbom:pkg:type">oci</property>
+        <property name="rad:kbom:pkg:name">docker.io/digitalocean/do-agent</property>
+        <property name="rad:kbom:pkg:version">3.16.7</property>
+        <property name="rad:kbom:pkg:digest">sha256:3e7fd2623ffce0bce5224d7c220564234a77bf9b9f56cc5d5321203191a8a98e</property>
+      </properties>
+    </component>
+    <component bom-ref="pkg:oci/hubble-relay@sha256%3Ac156c4fc2da520d2876142ea17490440b95431a1be755d2050e72115a495cfd0?repository_url=quay.io%2Fcilium%2Fhubble-relay&amp;tag=v1.14.10" type="container">
+      <name>quay.io/cilium/hubble-relay</name>
+      <version>sha256:c156c4fc2da520d2876142ea17490440b95431a1be755d2050e72115a495cfd0</version>
+      <purl>pkg:oci/hubble-relay@sha256%3Ac156c4fc2da520d2876142ea17490440b95431a1be755d2050e72115a495cfd0?repository_url=quay.io%2Fcilium%2Fhubble-relay&amp;tag=v1.14.10</purl>
+      <properties>
+        <property name="cdx:k8s:component:type">container</property>
+        <property name="cdx:k8s:component:name">quay.io/cilium/hubble-relay</property>
+        <property name="rad:kbom:pkg:type">oci</property>
+        <property name="rad:kbom:pkg:name">quay.io/cilium/hubble-relay</property>
+        <property name="rad:kbom:pkg:version">v1.14.10</property>
+        <property name="rad:kbom:pkg:digest">sha256:c156c4fc2da520d2876142ea17490440b95431a1be755d2050e72115a495cfd0</property>
+      </properties>
+    </component>
+    <component bom-ref="pkg:oci/proxy-agent@sha256%3A9a44a615d53d20d1ea5dbf407a65146e2a5263dd039b48e7f238b60ce063d3eb?repository_url=registry.k8s.io%2Fkas-network-proxy%2Fproxy-agent&amp;tag=v0.30.2" type="container">
+      <name>registry.k8s.io/kas-network-proxy/proxy-agent</name>
+      <version>sha256:9a44a615d53d20d1ea5dbf407a65146e2a5263dd039b48e7f238b60ce063d3eb</version>
+      <purl>pkg:oci/proxy-agent@sha256%3A9a44a615d53d20d1ea5dbf407a65146e2a5263dd039b48e7f238b60ce063d3eb?repository_url=registry.k8s.io%2Fkas-network-proxy%2Fproxy-agent&amp;tag=v0.30.2</purl>
+      <properties>
+        <property name="cdx:k8s:component:type">container</property>
+        <property name="cdx:k8s:component:name">registry.k8s.io/kas-network-proxy/proxy-agent</property>
+        <property name="rad:kbom:pkg:type">oci</property>
+        <property name="rad:kbom:pkg:name">registry.k8s.io/kas-network-proxy/proxy-agent</property>
+        <property name="rad:kbom:pkg:version">v0.30.2</property>
+        <property name="rad:kbom:pkg:digest">sha256:9a44a615d53d20d1ea5dbf407a65146e2a5263dd039b48e7f238b60ce063d3eb</property>
+      </properties>
+    </component>
+    <component bom-ref="pkg:oci/coredns@sha256%3A1eeb4c7316bacb1d4c8ead65571cd92dd21e27359f0d4917f1a5822a73b75db1?repository_url=docker.io%2Fcoredns%2Fcoredns&amp;tag=1.11.1" type="container">
+      <name>docker.io/coredns/coredns</name>
+      <version>sha256:1eeb4c7316bacb1d4c8ead65571cd92dd21e27359f0d4917f1a5822a73b75db1</version>
+      <purl>pkg:oci/coredns@sha256%3A1eeb4c7316bacb1d4c8ead65571cd92dd21e27359f0d4917f1a5822a73b75db1?repository_url=docker.io%2Fcoredns%2Fcoredns&amp;tag=1.11.1</purl>
+      <properties>
+        <property name="cdx:k8s:component:type">container</property>
+        <property name="cdx:k8s:component:name">docker.io/coredns/coredns</property>
+        <property name="rad:kbom:pkg:type">oci</property>
+        <property name="rad:kbom:pkg:name">docker.io/coredns/coredns</property>
+        <property name="rad:kbom:pkg:version">1.11.1</property>
+        <property name="rad:kbom:pkg:digest">sha256:1eeb4c7316bacb1d4c8ead65571cd92dd21e27359f0d4917f1a5822a73b75db1</property>
+      </properties>
+    </component>
+    <component bom-ref="pkg:oci/cpbridge@sha256%3A04ad16d1feb5d794dcdf9bc07b8eea26e4b60b72ec7f97c2008b350c5a51b10e?repository_url=docker.io%2Fdigitalocean%2Fcpbridge&amp;tag=1.26.0" type="container">
+      <name>docker.io/digitalocean/cpbridge</name>
+      <version>sha256:04ad16d1feb5d794dcdf9bc07b8eea26e4b60b72ec7f97c2008b350c5a51b10e</version>
+      <purl>pkg:oci/cpbridge@sha256%3A04ad16d1feb5d794dcdf9bc07b8eea26e4b60b72ec7f97c2008b350c5a51b10e?repository_url=docker.io%2Fdigitalocean%2Fcpbridge&amp;tag=1.26.0</purl>
+      <properties>
+        <property name="cdx:k8s:component:type">container</property>
+        <property name="cdx:k8s:component:name">docker.io/digitalocean/cpbridge</property>
+        <property name="rad:kbom:pkg:type">oci</property>
+        <property name="rad:kbom:pkg:name">docker.io/digitalocean/cpbridge</property>
+        <property name="rad:kbom:pkg:version">1.26.0</property>
+        <property name="rad:kbom:pkg:digest">sha256:04ad16d1feb5d794dcdf9bc07b8eea26e4b60b72ec7f97c2008b350c5a51b10e</property>
+      </properties>
+    </component>
+    <component bom-ref="pkg:oci/kubectl@sha256%3A4f74249f971f8ca158a03eaa0c8e7741a2a750fe53525dc69497cf23584df04a?repository_url=docker.io%2Fbitnami%2Fkubectl&amp;tag=1.30" type="container">
+      <name>docker.io/bitnami/kubectl</name>
+      <version>sha256:4f74249f971f8ca158a03eaa0c8e7741a2a750fe53525dc69497cf23584df04a</version>
+      <purl>pkg:oci/kubectl@sha256%3A4f74249f971f8ca158a03eaa0c8e7741a2a750fe53525dc69497cf23584df04a?repository_url=docker.io%2Fbitnami%2Fkubectl&amp;tag=1.30</purl>
+      <properties>
+        <property name="cdx:k8s:component:type">container</property>
+        <property name="cdx:k8s:component:name">docker.io/bitnami/kubectl</property>
+        <property name="rad:kbom:pkg:type">oci</property>
+        <property name="rad:kbom:pkg:name">docker.io/bitnami/kubectl</property>
+        <property name="rad:kbom:pkg:version">1.30</property>
+        <property name="rad:kbom:pkg:digest">sha256:4f74249f971f8ca158a03eaa0c8e7741a2a750fe53525dc69497cf23584df04a</property>
+      </properties>
+    </component>
+    <component bom-ref="pkg:oci/hubble-ui@sha256%3A7d663dc16538dd6e29061abd1047013a645e6e69c115e008bee9ea9fef9a6666?repository_url=quay.io%2Fcilium%2Fhubble-ui&amp;tag=v0.13.0" type="container">
+      <name>quay.io/cilium/hubble-ui</name>
+      <version>sha256:7d663dc16538dd6e29061abd1047013a645e6e69c115e008bee9ea9fef9a6666</version>
+      <purl>pkg:oci/hubble-ui@sha256%3A7d663dc16538dd6e29061abd1047013a645e6e69c115e008bee9ea9fef9a6666?repository_url=quay.io%2Fcilium%2Fhubble-ui&amp;tag=v0.13.0</purl>
+      <properties>
+        <property name="cdx:k8s:component:type">container</property>
+        <property name="cdx:k8s:component:name">quay.io/cilium/hubble-ui</property>
+        <property name="rad:kbom:pkg:type">oci</property>
+        <property name="rad:kbom:pkg:name">quay.io/cilium/hubble-ui</property>
+        <property name="rad:kbom:pkg:version">v0.13.0</property>
+        <property name="rad:kbom:pkg:digest">sha256:7d663dc16538dd6e29061abd1047013a645e6e69c115e008bee9ea9fef9a6666</property>
+      </properties>
+    </component>
+    <component bom-ref="pkg:oci/hubble-ui-backend@sha256%3A1e7657d997c5a48253bb8dc91ecee75b63018d16ff5e5797e5af367336bc8803?repository_url=quay.io%2Fcilium%2Fhubble-ui-backend&amp;tag=v0.13.0" type="container">
+      <name>quay.io/cilium/hubble-ui-backend</name>
+      <version>sha256:1e7657d997c5a48253bb8dc91ecee75b63018d16ff5e5797e5af367336bc8803</version>
+      <purl>pkg:oci/hubble-ui-backend@sha256%3A1e7657d997c5a48253bb8dc91ecee75b63018d16ff5e5797e5af367336bc8803?repository_url=quay.io%2Fcilium%2Fhubble-ui-backend&amp;tag=v0.13.0</purl>
+      <properties>
+        <property name="cdx:k8s:component:type">container</property>
+        <property name="cdx:k8s:component:name">quay.io/cilium/hubble-ui-backend</property>
+        <property name="rad:kbom:pkg:type">oci</property>
+        <property name="rad:kbom:pkg:name">quay.io/cilium/hubble-ui-backend</property>
+        <property name="rad:kbom:pkg:version">v0.13.0</property>
+        <property name="rad:kbom:pkg:digest">sha256:1e7657d997c5a48253bb8dc91ecee75b63018d16ff5e5797e5af367336bc8803</property>
+      </properties>
+    </component>
+    <component bom-ref="f66d7553b1e5283a" type="application">
+      <name>coredns-85f59d8784</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ReplicaSet</property>
+        <property name="cdx:k8s:component:name">coredns-85f59d8784</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="71a7b7668d5ad821" type="application">
+      <name>hubble-relay-74686df4df</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ReplicaSet</property>
+        <property name="cdx:k8s:component:name">hubble-relay-74686df4df</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="254efd38c4abaca6" type="application">
+      <name>hubble-ui-86cc69bddc</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ReplicaSet</property>
+        <property name="cdx:k8s:component:name">hubble-ui-86cc69bddc</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="282080a21905b63f" type="application">
+      <name>cilium-operator</name>
+      <properties>
+        <property name="cdx:k8s:component:type">PodDisruptionBudget</property>
+        <property name="cdx:k8s:component:name">cilium-operator</property>
+        <property name="rad:kbom:k8s:component:apiVersion">policy/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="9d43327c04acb5cc" type="application">
+      <name>kube-dns</name>
+      <properties>
+        <property name="cdx:k8s:component:type">PodDisruptionBudget</property>
+        <property name="cdx:k8s:component:name">kube-dns</property>
+        <property name="rad:kbom:k8s:component:apiVersion">policy/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="28cda6f1bc931d86" type="application">
+      <name>pool-37ti9u4a1-bpt78</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CSINode</property>
+        <property name="cdx:k8s:component:name">pool-37ti9u4a1-bpt78</property>
+        <property name="rad:kbom:k8s:component:apiVersion">storage.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0696c4bf098f21e6" type="application">
+      <name>kubernetes</name>
+      <properties>
+        <property name="cdx:k8s:component:type">EndpointSlice</property>
+        <property name="cdx:k8s:component:name">kubernetes</property>
+        <property name="rad:kbom:k8s:component:apiVersion">discovery.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">default</property>
+      </properties>
+    </component>
+    <component bom-ref="688567158834f1d1" type="application">
+      <name>hubble-peer-v5w7k</name>
+      <properties>
+        <property name="cdx:k8s:component:type">EndpointSlice</property>
+        <property name="cdx:k8s:component:name">hubble-peer-v5w7k</property>
+        <property name="rad:kbom:k8s:component:apiVersion">discovery.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="85832a928e401a0d" type="application">
+      <name>hubble-relay-2blxz</name>
+      <properties>
+        <property name="cdx:k8s:component:type">EndpointSlice</property>
+        <property name="cdx:k8s:component:name">hubble-relay-2blxz</property>
+        <property name="rad:kbom:k8s:component:apiVersion">discovery.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="68b37f7bf1cb808b" type="application">
+      <name>hubble-ui-vd8lx</name>
+      <properties>
+        <property name="cdx:k8s:component:type">EndpointSlice</property>
+        <property name="cdx:k8s:component:name">hubble-ui-vd8lx</property>
+        <property name="rad:kbom:k8s:component:apiVersion">discovery.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="8f7e6e9336faaf39" type="application">
+      <name>kube-dns-w4qg7</name>
+      <properties>
+        <property name="cdx:k8s:component:type">EndpointSlice</property>
+        <property name="cdx:k8s:component:name">kube-dns-w4qg7</property>
+        <property name="rad:kbom:k8s:component:apiVersion">discovery.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="d04c5b4b29a0b236" type="application">
+      <name>default</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Namespace</property>
+        <property name="cdx:k8s:component:name">default</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+      </properties>
+    </component>
+    <component bom-ref="e8b094653ac45fa9" type="application">
+      <name>kube-node-lease</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Namespace</property>
+        <property name="cdx:k8s:component:name">kube-node-lease</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b77685881c97fd7a" type="application">
+      <name>kube-public</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Namespace</property>
+        <property name="cdx:k8s:component:name">kube-public</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+      </properties>
+    </component>
+    <component bom-ref="cb1cd0c05ad4a313" type="application">
+      <name>kube-system</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Namespace</property>
+        <property name="cdx:k8s:component:name">kube-system</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+      </properties>
+    </component>
+    <component bom-ref="f0536616dc017589" type="application">
+      <name>cloud-controller-manager-token</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">cloud-controller-manager-token</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="a1106bfd7ede4b4a" type="application">
+      <name>cluster-autoscaler-token</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">cluster-autoscaler-token</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="a9ff972cd46397a7" type="application">
+      <name>csi-do-controller-sa-token</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">csi-do-controller-sa-token</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="4c31b198ddabdde2" type="application">
+      <name>do-agent-token</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">do-agent-token</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="940c7dc1534084af" type="application">
+      <name>doks-fluentbit-token</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">doks-fluentbit-token</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="5758cb529bce2111" type="application">
+      <name>dosecret-operator-token</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">dosecret-operator-token</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="673d75dde6611f20" type="application">
+      <name>hubble-ca-secret</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">hubble-ca-secret</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="087e378862f44a68" type="application">
+      <name>hubble-relay-client-certs</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">hubble-relay-client-certs</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="78390ac3b66f0190" type="application">
+      <name>hubble-server-certs</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">hubble-server-certs</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="22af8557920904e1" type="application">
+      <name>kube-proxy</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">kube-proxy</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="bfdc32595dc3e297" type="application">
+      <name>kubelet-rubber-stamp-token</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">kubelet-rubber-stamp-token</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="e584a1849e117a8f" type="application">
+      <name>snapshot-controller-token</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">snapshot-controller-token</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="2a21448eb66b19ac" type="application">
+      <name>snapshot-validation-token</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Secret</property>
+        <property name="cdx:k8s:component:name">snapshot-validation-token</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="9cb723662b00b639" type="application">
+      <name>kube-root-ca.crt</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">kube-root-ca.crt</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">default</property>
+      </properties>
+    </component>
+    <component bom-ref="b02f62a9fc4ed105" type="application">
+      <name>kube-root-ca.crt</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">kube-root-ca.crt</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-node-lease</property>
+      </properties>
+    </component>
+    <component bom-ref="31ca40f316a681de" type="application">
+      <name>kube-root-ca.crt</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">kube-root-ca.crt</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-public</property>
+      </properties>
+    </component>
+    <component bom-ref="4d546d2d806eb5ff" type="application">
+      <name>cilium-config</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">cilium-config</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="ad72dc69fd27000a" type="application">
+      <name>cluster-autoscaler-status</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">cluster-autoscaler-status</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="bdf867d1adeaa2f4" type="application">
+      <name>coredns</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">coredns</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="b74ebfdacde289ab" type="application">
+      <name>cpc-bridge-proxy-config</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">cpc-bridge-proxy-config</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="dcca71011ff8c44f" type="application">
+      <name>extension-apiserver-authentication</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">extension-apiserver-authentication</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="e5bce33528303785" type="application">
+      <name>hubble-relay-config</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">hubble-relay-config</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="3e62a0a1d57e523e" type="application">
+      <name>hubble-ui-nginx</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">hubble-ui-nginx</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="bb1d8fc7a9d7e796" type="application">
+      <name>kube-apiserver-legacy-service-account-token-tracking</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">kube-apiserver-legacy-service-account-token-tracking</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="22af8557920904e1" type="application">
+      <name>kube-proxy</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">kube-proxy</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="d327a6503e8df229" type="application">
+      <name>kube-root-ca.crt</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ConfigMap</property>
+        <property name="cdx:k8s:component:name">kube-root-ca.crt</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="af84dcd6cba54533" type="application">
+      <name>cilium-7zt6x</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Pod</property>
+        <property name="cdx:k8s:component:name">cilium-7zt6x</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="549167b1d33b181f" type="application">
+      <name>coredns-85f59d8784-7x4w8</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Pod</property>
+        <property name="cdx:k8s:component:name">coredns-85f59d8784-7x4w8</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="4b93ba3b3edf0e78" type="application">
+      <name>coredns-85f59d8784-qxxfm</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Pod</property>
+        <property name="cdx:k8s:component:name">coredns-85f59d8784-qxxfm</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="38021b6fb1410d3b" type="application">
+      <name>cpc-bridge-proxy-2h9rn</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Pod</property>
+        <property name="cdx:k8s:component:name">cpc-bridge-proxy-2h9rn</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="cd7e6cf6bae98370" type="application">
+      <name>csi-do-node-srl28</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Pod</property>
+        <property name="cdx:k8s:component:name">csi-do-node-srl28</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="1d5354809d95598d" type="application">
+      <name>do-node-agent-4q6sn</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Pod</property>
+        <property name="cdx:k8s:component:name">do-node-agent-4q6sn</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="652f7a5965f02aa4" type="application">
+      <name>hubble-relay-74686df4df-pzsfh</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Pod</property>
+        <property name="cdx:k8s:component:name">hubble-relay-74686df4df-pzsfh</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="c2014a10c35c8c5a" type="application">
+      <name>hubble-ui-86cc69bddc-njx9s</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Pod</property>
+        <property name="cdx:k8s:component:name">hubble-ui-86cc69bddc-njx9s</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="3d77f80de1a9fd0f" type="application">
+      <name>konnectivity-agent-q8v5f</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Pod</property>
+        <property name="cdx:k8s:component:name">konnectivity-agent-q8v5f</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="3176b1aaa293a58a" type="application">
+      <name>kube-proxy-5tprt</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Pod</property>
+        <property name="cdx:k8s:component:name">kube-proxy-5tprt</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="bdf867d1adeaa2f4" type="application">
+      <name>coredns</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Deployment</property>
+        <property name="cdx:k8s:component:name">coredns</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="ab24b5811faafc1b" type="application">
+      <name>hubble-relay</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Deployment</property>
+        <property name="cdx:k8s:component:name">hubble-relay</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="4f5bf0ac8a27e762" type="application">
+      <name>hubble-ui</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Deployment</property>
+        <property name="cdx:k8s:component:name">hubble-ui</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="c0053b7e8c99f8b9" type="application">
+      <name>do-block-storage</name>
+      <properties>
+        <property name="cdx:k8s:component:type">StorageClass</property>
+        <property name="cdx:k8s:component:name">do-block-storage</property>
+        <property name="rad:kbom:k8s:component:apiVersion">storage.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="c5b10efe277fea9d" type="application">
+      <name>do-block-storage-retain</name>
+      <properties>
+        <property name="cdx:k8s:component:type">StorageClass</property>
+        <property name="cdx:k8s:component:name">do-block-storage-retain</property>
+        <property name="rad:kbom:k8s:component:apiVersion">storage.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="1280298ba23e13d8" type="application">
+      <name>do-block-storage-xfs</name>
+      <properties>
+        <property name="cdx:k8s:component:type">StorageClass</property>
+        <property name="cdx:k8s:component:name">do-block-storage-xfs</property>
+        <property name="rad:kbom:k8s:component:apiVersion">storage.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="306ef33325d48da2" type="application">
+      <name>do-block-storage-xfs-retain</name>
+      <properties>
+        <property name="cdx:k8s:component:type">StorageClass</property>
+        <property name="cdx:k8s:component:name">do-block-storage-xfs-retain</property>
+        <property name="rad:kbom:k8s:component:apiVersion">storage.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="28cda6f1bc931d86" type="application">
+      <name>pool-37ti9u4a1-bpt78</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CiliumNode</property>
+        <property name="cdx:k8s:component:name">pool-37ti9u4a1-bpt78</property>
+        <property name="rad:kbom:k8s:component:apiVersion">cilium.io/v2</property>
+      </properties>
+    </component>
+    <component bom-ref="0696c4bf098f21e6" type="application">
+      <name>kubernetes</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Endpoints</property>
+        <property name="cdx:k8s:component:name">kubernetes</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">default</property>
+      </properties>
+    </component>
+    <component bom-ref="c6313b267c278254" type="application">
+      <name>hubble-peer</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Endpoints</property>
+        <property name="cdx:k8s:component:name">hubble-peer</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="ab24b5811faafc1b" type="application">
+      <name>hubble-relay</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Endpoints</property>
+        <property name="cdx:k8s:component:name">hubble-relay</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="4f5bf0ac8a27e762" type="application">
+      <name>hubble-ui</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Endpoints</property>
+        <property name="cdx:k8s:component:name">hubble-ui</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="9d43327c04acb5cc" type="application">
+      <name>kube-dns</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Endpoints</property>
+        <property name="cdx:k8s:component:name">kube-dns</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="6ed1f8cacfb98811" type="application">
+      <name>system-cluster-critical</name>
+      <properties>
+        <property name="cdx:k8s:component:type">PriorityClass</property>
+        <property name="cdx:k8s:component:name">system-cluster-critical</property>
+        <property name="rad:kbom:k8s:component:apiVersion">scheduling.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="4244150e689f941d" type="application">
+      <name>system-node-critical</name>
+      <properties>
+        <property name="cdx:k8s:component:type">PriorityClass</property>
+        <property name="cdx:k8s:component:name">system-node-critical</property>
+        <property name="rad:kbom:k8s:component:apiVersion">scheduling.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="173c44ede6ba3c51" type="application">
+      <name>default</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">default</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">default</property>
+      </properties>
+    </component>
+    <component bom-ref="d2eca3dd6b93a9e1" type="application">
+      <name>default</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">default</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-node-lease</property>
+      </properties>
+    </component>
+    <component bom-ref="7b813a4e1ef5c4b6" type="application">
+      <name>default</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">default</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-public</property>
+      </properties>
+    </component>
+    <component bom-ref="e488929ac5861f4a" type="application">
+      <name>attachdetach-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">attachdetach-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="457db1fd948d4415" type="application">
+      <name>certificate-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">certificate-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="0526780d7f9950b4" type="application">
+      <name>cilium</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">cilium</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="282080a21905b63f" type="application">
+      <name>cilium-operator</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">cilium-operator</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="ce74c1a5390582f9" type="application">
+      <name>cloud-controller-manager</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">cloud-controller-manager</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="337f7489244569f5" type="application">
+      <name>cluster-autoscaler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">cluster-autoscaler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="688d8471b0981574" type="application">
+      <name>clusterrole-aggregation-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">clusterrole-aggregation-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="bdf867d1adeaa2f4" type="application">
+      <name>coredns</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">coredns</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="96eea4ade166655d" type="application">
+      <name>cronjob-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">cronjob-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="46332f5c93e96c3d" type="application">
+      <name>csi-do-controller-sa</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">csi-do-controller-sa</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="4ec0b0821ae6169e" type="application">
+      <name>csi-do-node-sa</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">csi-do-node-sa</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="a0272f6db8778ba5" type="application">
+      <name>daemon-set-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">daemon-set-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="a1c6f326c7c55b69" type="application">
+      <name>default</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">default</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="d40273ceb855e281" type="application">
+      <name>deployment-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">deployment-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="e6fbc89c48a0a2fa" type="application">
+      <name>disruption-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">disruption-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="dae8d10da9861c31" type="application">
+      <name>do-agent</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">do-agent</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="301a57057433ea6c" type="application">
+      <name>doks-fluentbit</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">doks-fluentbit</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="c2043028d7dac824" type="application">
+      <name>dosecret-operator</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">dosecret-operator</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="84f25443012aaa99" type="application">
+      <name>endpoint-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">endpoint-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="0ed2d5718990fc6f" type="application">
+      <name>endpointslice-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">endpointslice-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="7c1df928ba7f0e0d" type="application">
+      <name>endpointslicemirroring-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">endpointslicemirroring-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="229001c66518409a" type="application">
+      <name>ephemeral-volume-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">ephemeral-volume-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="0afde7cccad536e9" type="application">
+      <name>expand-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">expand-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="c36bff671531f286" type="application">
+      <name>generic-garbage-collector</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">generic-garbage-collector</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="110811c25de952fb" type="application">
+      <name>horizontal-pod-autoscaler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">horizontal-pod-autoscaler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="ab24b5811faafc1b" type="application">
+      <name>hubble-relay</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">hubble-relay</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="4f5bf0ac8a27e762" type="application">
+      <name>hubble-ui</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">hubble-ui</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="d64ffd6ec1d43fe0" type="application">
+      <name>job-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">job-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="69d92b777fff19df" type="application">
+      <name>konnectivity-agent</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">konnectivity-agent</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="22af8557920904e1" type="application">
+      <name>kube-proxy</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">kube-proxy</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="43c83216d6ff3d06" type="application">
+      <name>kubelet-rubber-stamp</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">kubelet-rubber-stamp</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="882232a30c8d1696" type="application">
+      <name>legacy-service-account-token-cleaner</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">legacy-service-account-token-cleaner</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="4ed3c30934dbd57c" type="application">
+      <name>namespace-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">namespace-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="bb16bb0d349a5120" type="application">
+      <name>node-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">node-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="293e5cbf2785b9f0" type="application">
+      <name>persistent-volume-binder</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">persistent-volume-binder</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="39e2861c2f426a9c" type="application">
+      <name>pod-garbage-collector</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">pod-garbage-collector</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="a041208ea3e869fa" type="application">
+      <name>pv-protection-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">pv-protection-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="d1221d7ae0fb0999" type="application">
+      <name>pvc-protection-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">pvc-protection-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="b8f4fad9a1a48f4d" type="application">
+      <name>replicaset-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">replicaset-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="593e7aaa1ccc3eee" type="application">
+      <name>replication-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">replication-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="d6fe60e54553565a" type="application">
+      <name>resourcequota-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">resourcequota-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="4d9b81c47b198547" type="application">
+      <name>root-ca-cert-publisher</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">root-ca-cert-publisher</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="b101eb92ea408547" type="application">
+      <name>service-account-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">service-account-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="c957833220fe668d" type="application">
+      <name>service-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">service-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="8447fce9ed09652c" type="application">
+      <name>snapshot-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">snapshot-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="12e0d2e5c0d7c0cd" type="application">
+      <name>snapshot-validation</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">snapshot-validation</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="1081e9722670a6d1" type="application">
+      <name>statefulset-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">statefulset-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="32614d43422079db" type="application">
+      <name>token-cleaner</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">token-cleaner</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="b0f98409a0b046fc" type="application">
+      <name>ttl-after-finished-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">ttl-after-finished-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="7db5ea8783b005c0" type="application">
+      <name>ttl-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">ttl-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="07728536c5e358ef" type="application">
+      <name>validatingadmissionpolicy-status-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ServiceAccount</property>
+        <property name="cdx:k8s:component:name">validatingadmissionpolicy-status-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="0539ee0570c95d4d" type="application">
+      <name>v1.</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="3ffd411cf4414284" type="application">
+      <name>v1.admissionregistration.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.admissionregistration.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="6bbd5c2bfa2f457f" type="application">
+      <name>v1.apiextensions.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.apiextensions.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="6d88af2bf24d42f9" type="application">
+      <name>v1.apps</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.apps</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="ed6972f7269f81d6" type="application">
+      <name>v1.authentication.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.authentication.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="62df4e4628626d97" type="application">
+      <name>v1.authorization.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.authorization.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="a55a3d95226a1a07" type="application">
+      <name>v1.autoscaling</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.autoscaling</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="320d984de4c81802" type="application">
+      <name>v1.batch</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.batch</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="80b1b8c0bf7ddb90" type="application">
+      <name>v1.certificates.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.certificates.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="c254b4ab00f05f24" type="application">
+      <name>v1.coordination.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.coordination.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b70ce2ee048fce40" type="application">
+      <name>v1.discovery.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.discovery.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0142a9fa9e5c92c6" type="application">
+      <name>v1.events.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.events.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="854ba9caab549e62" type="application">
+      <name>v1.flowcontrol.apiserver.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.flowcontrol.apiserver.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="3e84a9d91e0e3e27" type="application">
+      <name>v1.networking.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.networking.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="199000ab806ae292" type="application">
+      <name>v1.node.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.node.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="d66488df4df3e6b4" type="application">
+      <name>v1.policy</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.policy</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="befdba776ed612c7" type="application">
+      <name>v1.rbac.authorization.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.rbac.authorization.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="fd2991ff7c363c62" type="application">
+      <name>v1.scheduling.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.scheduling.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="443680311763f1a9" type="application">
+      <name>v1.snapshot.storage.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.snapshot.storage.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="612504403f52297f" type="application">
+      <name>v1.storage.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1.storage.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="f49f2f3e84f483b5" type="application">
+      <name>v1beta3.flowcontrol.apiserver.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v1beta3.flowcontrol.apiserver.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="a370e6d3edf9baa5" type="application">
+      <name>v2.autoscaling</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v2.autoscaling</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="09bac4113e120780" type="application">
+      <name>v2.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v2.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="d3103650f06e2893" type="application">
+      <name>v2alpha1.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">APIService</property>
+        <property name="cdx:k8s:component:name">v2alpha1.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="03ef17fa37d27db6" type="application">
+      <name>system:controller:bootstrap-signer</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Role</property>
+        <property name="cdx:k8s:component:name">system:controller:bootstrap-signer</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-public</property>
+      </properties>
+    </component>
+    <component bom-ref="77514b574058f308" type="application">
+      <name>cilium-config-agent</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Role</property>
+        <property name="cdx:k8s:component:name">cilium-config-agent</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="337f7489244569f5" type="application">
+      <name>cluster-autoscaler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Role</property>
+        <property name="cdx:k8s:component:name">cluster-autoscaler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="5ff7f7e1c5d80b4f" type="application">
+      <name>extension-apiserver-authentication-reader</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Role</property>
+        <property name="cdx:k8s:component:name">extension-apiserver-authentication-reader</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="8ef5deb25487cb77" type="application">
+      <name>k8saas:support:edit</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Role</property>
+        <property name="cdx:k8s:component:name">k8saas:support:edit</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="43c83216d6ff3d06" type="application">
+      <name>kubelet-rubber-stamp</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Role</property>
+        <property name="cdx:k8s:component:name">kubelet-rubber-stamp</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="280c61d514176c76" type="application">
+      <name>system::leader-locking-kube-controller-manager</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Role</property>
+        <property name="cdx:k8s:component:name">system::leader-locking-kube-controller-manager</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="e433797efd4b36d8" type="application">
+      <name>system::leader-locking-kube-scheduler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Role</property>
+        <property name="cdx:k8s:component:name">system::leader-locking-kube-scheduler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="fd12894962b1c4e9" type="application">
+      <name>system:controller:bootstrap-signer</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Role</property>
+        <property name="cdx:k8s:component:name">system:controller:bootstrap-signer</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="673511eebedf65b3" type="application">
+      <name>system:controller:cloud-provider</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Role</property>
+        <property name="cdx:k8s:component:name">system:controller:cloud-provider</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="7deee45c8b2a4131" type="application">
+      <name>system:controller:token-cleaner</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Role</property>
+        <property name="cdx:k8s:component:name">system:controller:token-cleaner</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="03ef17fa37d27db6" type="application">
+      <name>system:controller:bootstrap-signer</name>
+      <properties>
+        <property name="cdx:k8s:component:type">RoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:bootstrap-signer</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-public</property>
+      </properties>
+    </component>
+    <component bom-ref="77514b574058f308" type="application">
+      <name>cilium-config-agent</name>
+      <properties>
+        <property name="cdx:k8s:component:type">RoleBinding</property>
+        <property name="cdx:k8s:component:name">cilium-config-agent</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="337f7489244569f5" type="application">
+      <name>cluster-autoscaler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">RoleBinding</property>
+        <property name="cdx:k8s:component:name">cluster-autoscaler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="8ef5deb25487cb77" type="application">
+      <name>k8saas:support:edit</name>
+      <properties>
+        <property name="cdx:k8s:component:type">RoleBinding</property>
+        <property name="cdx:k8s:component:name">k8saas:support:edit</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="43c83216d6ff3d06" type="application">
+      <name>kubelet-rubber-stamp</name>
+      <properties>
+        <property name="cdx:k8s:component:type">RoleBinding</property>
+        <property name="cdx:k8s:component:name">kubelet-rubber-stamp</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="a6286a71807325f4" type="application">
+      <name>system::extension-apiserver-authentication-reader</name>
+      <properties>
+        <property name="cdx:k8s:component:type">RoleBinding</property>
+        <property name="cdx:k8s:component:name">system::extension-apiserver-authentication-reader</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="280c61d514176c76" type="application">
+      <name>system::leader-locking-kube-controller-manager</name>
+      <properties>
+        <property name="cdx:k8s:component:type">RoleBinding</property>
+        <property name="cdx:k8s:component:name">system::leader-locking-kube-controller-manager</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="e433797efd4b36d8" type="application">
+      <name>system::leader-locking-kube-scheduler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">RoleBinding</property>
+        <property name="cdx:k8s:component:name">system::leader-locking-kube-scheduler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="fd12894962b1c4e9" type="application">
+      <name>system:controller:bootstrap-signer</name>
+      <properties>
+        <property name="cdx:k8s:component:type">RoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:bootstrap-signer</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="673511eebedf65b3" type="application">
+      <name>system:controller:cloud-provider</name>
+      <properties>
+        <property name="cdx:k8s:component:type">RoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:cloud-provider</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="7deee45c8b2a4131" type="application">
+      <name>system:controller:token-cleaner</name>
+      <properties>
+        <property name="cdx:k8s:component:type">RoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:token-cleaner</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="a501a040b6d6478e" type="application">
+      <name>digitalocean-cloud-controller-manager-admission-webhook</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ValidatingWebhookConfiguration</property>
+        <property name="cdx:k8s:component:name">digitalocean-cloud-controller-manager-admission-webhook</property>
+        <property name="rad:kbom:k8s:component:apiVersion">admissionregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="4a8e06c41de862b1" type="application">
+      <name>validation-webhook.snapshot.storage.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ValidatingWebhookConfiguration</property>
+        <property name="cdx:k8s:component:name">validation-webhook.snapshot.storage.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">admissionregistration.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="982a4bf97acbd87d" type="application">
+      <name>ciliumcidrgroups.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">ciliumcidrgroups.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="018937c653944e71" type="application">
+      <name>ciliumclusterwidenetworkpolicies.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">ciliumclusterwidenetworkpolicies.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="a7e4be9d9359f24f" type="application">
+      <name>ciliumendpoints.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">ciliumendpoints.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="9812d850e11f287c" type="application">
+      <name>ciliumexternalworkloads.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">ciliumexternalworkloads.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="a6adf26bb59609a2" type="application">
+      <name>ciliumidentities.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">ciliumidentities.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="98d90d4898447d31" type="application">
+      <name>ciliuml2announcementpolicies.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">ciliuml2announcementpolicies.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="ee195d299cd335e5" type="application">
+      <name>ciliumloadbalancerippools.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">ciliumloadbalancerippools.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="e69c38f533de6a66" type="application">
+      <name>ciliumnetworkpolicies.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">ciliumnetworkpolicies.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="766ffcf7ca6d84c9" type="application">
+      <name>ciliumnodeconfigs.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">ciliumnodeconfigs.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="83b58eadccb7a14c" type="application">
+      <name>ciliumnodes.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">ciliumnodes.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="cdb64b68ba0863ec" type="application">
+      <name>ciliumpodippools.cilium.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">ciliumpodippools.cilium.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b25f82470e729957" type="application">
+      <name>volumesnapshotclasses.snapshot.storage.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">volumesnapshotclasses.snapshot.storage.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0bef1339bfb0af65" type="application">
+      <name>volumesnapshotcontents.snapshot.storage.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">volumesnapshotcontents.snapshot.storage.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="2a9a919aba0ee857" type="application">
+      <name>volumesnapshots.snapshot.storage.k8s.io</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CustomResourceDefinition</property>
+        <property name="cdx:k8s:component:name">volumesnapshots.snapshot.storage.k8s.io</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apiextensions.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="6e0fdfa7cf54d093" type="application">
+      <name>catch-all</name>
+      <properties>
+        <property name="cdx:k8s:component:type">PriorityLevelConfiguration</property>
+        <property name="cdx:k8s:component:name">catch-all</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="44e5dcddb766fab1" type="application">
+      <name>exempt</name>
+      <properties>
+        <property name="cdx:k8s:component:type">PriorityLevelConfiguration</property>
+        <property name="cdx:k8s:component:name">exempt</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="70538b1a576ef29e" type="application">
+      <name>global-default</name>
+      <properties>
+        <property name="cdx:k8s:component:type">PriorityLevelConfiguration</property>
+        <property name="cdx:k8s:component:name">global-default</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="c0cb2056b7cfb72a" type="application">
+      <name>leader-election</name>
+      <properties>
+        <property name="cdx:k8s:component:type">PriorityLevelConfiguration</property>
+        <property name="cdx:k8s:component:name">leader-election</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="90a2bda90d973c88" type="application">
+      <name>node-high</name>
+      <properties>
+        <property name="cdx:k8s:component:type">PriorityLevelConfiguration</property>
+        <property name="cdx:k8s:component:name">node-high</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="d3f40a101a393a70" type="application">
+      <name>system</name>
+      <properties>
+        <property name="cdx:k8s:component:type">PriorityLevelConfiguration</property>
+        <property name="cdx:k8s:component:name">system</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="61150b71dcd7ea15" type="application">
+      <name>workload-high</name>
+      <properties>
+        <property name="cdx:k8s:component:type">PriorityLevelConfiguration</property>
+        <property name="cdx:k8s:component:name">workload-high</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="92d618526e3c4f4b" type="application">
+      <name>workload-low</name>
+      <properties>
+        <property name="cdx:k8s:component:type">PriorityLevelConfiguration</property>
+        <property name="cdx:k8s:component:name">workload-low</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="2f34062851b771a8" type="application">
+      <name>scheduler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ComponentStatus</property>
+        <property name="cdx:k8s:component:name">scheduler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0c0ec27f966c190c" type="application">
+      <name>controller-manager</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ComponentStatus</property>
+        <property name="cdx:k8s:component:name">controller-manager</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+      </properties>
+    </component>
+    <component bom-ref="63fef3644bd46b7c" type="application">
+      <name>etcd-0</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ComponentStatus</property>
+        <property name="cdx:k8s:component:name">etcd-0</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0526780d7f9950b4" type="application">
+      <name>cilium</name>
+      <properties>
+        <property name="cdx:k8s:component:type">DaemonSet</property>
+        <property name="cdx:k8s:component:name">cilium</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="57b978dffeaa33df" type="application">
+      <name>cpc-bridge-proxy</name>
+      <properties>
+        <property name="cdx:k8s:component:type">DaemonSet</property>
+        <property name="cdx:k8s:component:name">cpc-bridge-proxy</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="337ddea349c422ce" type="application">
+      <name>csi-do-node</name>
+      <properties>
+        <property name="cdx:k8s:component:type">DaemonSet</property>
+        <property name="cdx:k8s:component:name">csi-do-node</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="e81e71efccf63a26" type="application">
+      <name>do-node-agent</name>
+      <properties>
+        <property name="cdx:k8s:component:type">DaemonSet</property>
+        <property name="cdx:k8s:component:name">do-node-agent</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="69d92b777fff19df" type="application">
+      <name>konnectivity-agent</name>
+      <properties>
+        <property name="cdx:k8s:component:type">DaemonSet</property>
+        <property name="cdx:k8s:component:name">konnectivity-agent</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="22af8557920904e1" type="application">
+      <name>kube-proxy</name>
+      <properties>
+        <property name="cdx:k8s:component:type">DaemonSet</property>
+        <property name="cdx:k8s:component:name">kube-proxy</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="5fa2df82c5225166" type="application">
+      <name>admin</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">admin</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="ce5e8c331a0539cb" type="application">
+      <name>cilium</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">cilium</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="9a440892e15d8fd4" type="application">
+      <name>cilium-operator</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">cilium-operator</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="265c00f983b98ab9" type="application">
+      <name>cluster-admin</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">cluster-admin</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="fdf1a514d16a9026" type="application">
+      <name>cluster-autoscaler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">cluster-autoscaler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="eae9f0c9444b6995" type="application">
+      <name>csi-do-attacher-role</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">csi-do-attacher-role</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="d95cc0d80572fcbc" type="application">
+      <name>csi-do-node-driver-registrar-role</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">csi-do-node-driver-registrar-role</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b29905d105af15bc" type="application">
+      <name>csi-do-provisioner-role</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">csi-do-provisioner-role</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="ea8db09fc874e8f2" type="application">
+      <name>csi-do-resizer-role</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">csi-do-resizer-role</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="f41fd61fda9614b8" type="application">
+      <name>csi-do-snapshotter-role</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">csi-do-snapshotter-role</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="62b1db1fe3d8d3c2" type="application">
+      <name>do-agent</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">do-agent</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="89c2f2f16d813d8d" type="application">
+      <name>do:modifier</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">do:modifier</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="54ccbb24f876725b" type="application">
+      <name>dosecret-operator</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">dosecret-operator</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="2d6efe7fc9e4e2f9" type="application">
+      <name>edit</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">edit</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="162aeb9f9c325559" type="application">
+      <name>hubble-ui</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">hubble-ui</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b6af9783fd9d24a2" type="application">
+      <name>k8saas:support:view</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">k8saas:support:view</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="1bda4045bffaa2a8" type="application">
+      <name>kubelet</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">kubelet</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="57df4595fca7befd" type="application">
+      <name>kubelet-rubber-stamp</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">kubelet-rubber-stamp</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="31ef0015b2ba9896" type="application">
+      <name>snapshot-controller-role</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">snapshot-controller-role</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="171f28dc9d219992" type="application">
+      <name>snapshot-validation</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">snapshot-validation</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="bc4dcf284f4deae1" type="application">
+      <name>system:aggregate-to-admin</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:aggregate-to-admin</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="f4b31370ceb493ff" type="application">
+      <name>system:aggregate-to-edit</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:aggregate-to-edit</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="1604f24dfa39cd17" type="application">
+      <name>system:aggregate-to-view</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:aggregate-to-view</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="3d596515eb3c4e27" type="application">
+      <name>system:auth-delegator</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:auth-delegator</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="7b674244e73c4b6f" type="application">
+      <name>system:basic-user</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:basic-user</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b1f5e6bd425039d1" type="application">
+      <name>system:certificates.k8s.io:certificatesigningrequests:nodeclient</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:certificates.k8s.io:certificatesigningrequests:nodeclient</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="7edb8a9d86bc44b8" type="application">
+      <name>system:certificates.k8s.io:certificatesigningrequests:selfnodeclient</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:certificates.k8s.io:certificatesigningrequests:selfnodeclient</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="ecf15d8bce5ecd9a" type="application">
+      <name>system:certificates.k8s.io:kube-apiserver-client-approver</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:certificates.k8s.io:kube-apiserver-client-approver</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="167700cd59c85ab3" type="application">
+      <name>system:certificates.k8s.io:kube-apiserver-client-kubelet-approver</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:certificates.k8s.io:kube-apiserver-client-kubelet-approver</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="bef2478bf990cd24" type="application">
+      <name>system:certificates.k8s.io:kubelet-serving-approver</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:certificates.k8s.io:kubelet-serving-approver</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="edfe7034f55ccedc" type="application">
+      <name>system:certificates.k8s.io:legacy-unknown-approver</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:certificates.k8s.io:legacy-unknown-approver</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="5bc15f3d17a80619" type="application">
+      <name>system:cloud-controller-manager</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:cloud-controller-manager</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="31001665c41bad42" type="application">
+      <name>system:controller:attachdetach-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:attachdetach-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="f466c7198cd09d11" type="application">
+      <name>system:controller:certificate-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:certificate-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="9cb304f1211c0097" type="application">
+      <name>system:controller:clusterrole-aggregation-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:clusterrole-aggregation-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="d48e0d4d0ded2766" type="application">
+      <name>system:controller:cronjob-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:cronjob-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="06bf65b15c4ee9d3" type="application">
+      <name>system:controller:daemon-set-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:daemon-set-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="91ac494dc6b93a9e" type="application">
+      <name>system:controller:deployment-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:deployment-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="1a9124ba89a64c46" type="application">
+      <name>system:controller:disruption-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:disruption-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="a591c827640bbd22" type="application">
+      <name>system:controller:endpoint-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:endpoint-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="da2bbdf6843233c2" type="application">
+      <name>system:controller:endpointslice-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:endpointslice-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="d282eb5515289052" type="application">
+      <name>system:controller:endpointslicemirroring-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:endpointslicemirroring-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="a73b720c9a028b25" type="application">
+      <name>system:controller:ephemeral-volume-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:ephemeral-volume-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="733e3acd7bf35212" type="application">
+      <name>system:controller:expand-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:expand-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="83d00c4842a017e5" type="application">
+      <name>system:controller:generic-garbage-collector</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:generic-garbage-collector</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="124327f6f8bf0f82" type="application">
+      <name>system:controller:horizontal-pod-autoscaler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:horizontal-pod-autoscaler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="8bc9cb97f9bdeb04" type="application">
+      <name>system:controller:job-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:job-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0b31e2db3ca06eaf" type="application">
+      <name>system:controller:legacy-service-account-token-cleaner</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:legacy-service-account-token-cleaner</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="9394bda5fae5993e" type="application">
+      <name>system:controller:namespace-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:namespace-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="7509f40bcb9b4834" type="application">
+      <name>system:controller:node-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:node-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="a737f0ab17721637" type="application">
+      <name>system:controller:persistent-volume-binder</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:persistent-volume-binder</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="8e3cfae821247dc4" type="application">
+      <name>system:controller:pod-garbage-collector</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:pod-garbage-collector</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="ebf75fbbcd71bf7e" type="application">
+      <name>system:controller:pv-protection-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:pv-protection-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="90c7582e5f6f22e7" type="application">
+      <name>system:controller:pvc-protection-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:pvc-protection-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b0a95d9de0d9ac5b" type="application">
+      <name>system:controller:replicaset-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:replicaset-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="354d9ec2308eebc9" type="application">
+      <name>system:controller:replication-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:replication-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="82300cd72c2914da" type="application">
+      <name>system:controller:resourcequota-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:resourcequota-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="8b4825f40232142a" type="application">
+      <name>system:controller:root-ca-cert-publisher</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:root-ca-cert-publisher</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="27e2a41b3388e90e" type="application">
+      <name>system:controller:route-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:route-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="f503770afdcc4e7f" type="application">
+      <name>system:controller:service-account-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:service-account-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="308939a738f35649" type="application">
+      <name>system:controller:service-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:service-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="8ecd89fbc91f856d" type="application">
+      <name>system:controller:statefulset-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:statefulset-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="c361424194fa1170" type="application">
+      <name>system:controller:ttl-after-finished-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:ttl-after-finished-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="c59e04b6dd04ece9" type="application">
+      <name>system:controller:ttl-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:ttl-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0a99fdc081ca77e9" type="application">
+      <name>system:controller:validatingadmissionpolicy-status-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:controller:validatingadmissionpolicy-status-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="9c5c3840948da329" type="application">
+      <name>system:coredns</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:coredns</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="14ff49a912e3bdbd" type="application">
+      <name>system:discovery</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:discovery</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b64d0a164430564b" type="application">
+      <name>system:doks-fluentbit</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:doks-fluentbit</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="9cde5f3b32a26dc5" type="application">
+      <name>system:heapster</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:heapster</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="059d3161cd818acb" type="application">
+      <name>system:kube-aggregator</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:kube-aggregator</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="5ad1f104590a9392" type="application">
+      <name>system:kube-controller-manager</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:kube-controller-manager</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="4b267ba72c3e2f46" type="application">
+      <name>system:kube-dns</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:kube-dns</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="656e6d0eb8c5404c" type="application">
+      <name>system:kube-scheduler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:kube-scheduler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="5ffea7301eb538fc" type="application">
+      <name>system:kubelet-api-admin</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:kubelet-api-admin</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="933b0b6ba7a88521" type="application">
+      <name>system:monitoring</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:monitoring</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="3795c31cef363c34" type="application">
+      <name>system:node</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:node</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="451415da47bbb7e9" type="application">
+      <name>system:node-bootstrapper</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:node-bootstrapper</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b7c5596030562e1e" type="application">
+      <name>system:node-problem-detector</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:node-problem-detector</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="02c2caea869f4526" type="application">
+      <name>system:node-proxier</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:node-proxier</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="5b11f43c28df1495" type="application">
+      <name>system:persistent-volume-provisioner</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:persistent-volume-provisioner</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0751c4ae149a262c" type="application">
+      <name>system:public-info-viewer</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:public-info-viewer</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="9625219389ce547e" type="application">
+      <name>system:service-account-issuer-discovery</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:service-account-issuer-discovery</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="fb7c737d7b0222a5" type="application">
+      <name>system:volume-scheduler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">system:volume-scheduler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="96382b758d8062f9" type="application">
+      <name>view</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRole</property>
+        <property name="cdx:k8s:component:name">view</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="8a25adfc53f6488f" type="application">
+      <name>dobs.csi.digitalocean.com</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CSIDriver</property>
+        <property name="cdx:k8s:component:name">dobs.csi.digitalocean.com</property>
+        <property name="rad:kbom:k8s:component:apiVersion">storage.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="549167b1d33b181f" type="application">
+      <name>coredns-85f59d8784-7x4w8</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CiliumEndpoint</property>
+        <property name="cdx:k8s:component:name">coredns-85f59d8784-7x4w8</property>
+        <property name="rad:kbom:k8s:component:apiVersion">cilium.io/v2</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="4b93ba3b3edf0e78" type="application">
+      <name>coredns-85f59d8784-qxxfm</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CiliumEndpoint</property>
+        <property name="cdx:k8s:component:name">coredns-85f59d8784-qxxfm</property>
+        <property name="rad:kbom:k8s:component:apiVersion">cilium.io/v2</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="652f7a5965f02aa4" type="application">
+      <name>hubble-relay-74686df4df-pzsfh</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CiliumEndpoint</property>
+        <property name="cdx:k8s:component:name">hubble-relay-74686df4df-pzsfh</property>
+        <property name="rad:kbom:k8s:component:apiVersion">cilium.io/v2</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="c2014a10c35c8c5a" type="application">
+      <name>hubble-ui-86cc69bddc-njx9s</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CiliumEndpoint</property>
+        <property name="cdx:k8s:component:name">hubble-ui-86cc69bddc-njx9s</property>
+        <property name="rad:kbom:k8s:component:apiVersion">cilium.io/v2</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="3d77f80de1a9fd0f" type="application">
+      <name>konnectivity-agent-q8v5f</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CiliumEndpoint</property>
+        <property name="cdx:k8s:component:name">konnectivity-agent-q8v5f</property>
+        <property name="rad:kbom:k8s:component:apiVersion">cilium.io/v2</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="49839d00a8f8a472" type="application">
+      <name>cilium-7b779865f5</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ControllerRevision</property>
+        <property name="cdx:k8s:component:name">cilium-7b779865f5</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="51dcd0fdab6f59dc" type="application">
+      <name>cpc-bridge-proxy-75b5bd798b</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ControllerRevision</property>
+        <property name="cdx:k8s:component:name">cpc-bridge-proxy-75b5bd798b</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="c0ec39626fca1a7c" type="application">
+      <name>csi-do-node-78474795f</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ControllerRevision</property>
+        <property name="cdx:k8s:component:name">csi-do-node-78474795f</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="2f23b673589f6213" type="application">
+      <name>do-node-agent-7bc5986ccf</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ControllerRevision</property>
+        <property name="cdx:k8s:component:name">do-node-agent-7bc5986ccf</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="b29866f4514f9fea" type="application">
+      <name>konnectivity-agent-7c68b5dc9</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ControllerRevision</property>
+        <property name="cdx:k8s:component:name">konnectivity-agent-7c68b5dc9</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="437da7a090c35937" type="application">
+      <name>kube-proxy-75b4d8d8b6</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ControllerRevision</property>
+        <property name="cdx:k8s:component:name">kube-proxy-75b4d8d8b6</property>
+        <property name="rad:kbom:k8s:component:apiVersion">apps/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="ca2ed96d4e621cb9" type="application">
+      <name>csr-4ccvs</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CertificateSigningRequest</property>
+        <property name="cdx:k8s:component:name">csr-4ccvs</property>
+        <property name="rad:kbom:k8s:component:apiVersion">certificates.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="42d509aacc740856" type="application">
+      <name>csr-kjfcp</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CertificateSigningRequest</property>
+        <property name="cdx:k8s:component:name">csr-kjfcp</property>
+        <property name="rad:kbom:k8s:component:apiVersion">certificates.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b47bde6032431670" type="application">
+      <name>csr-slfvp</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CertificateSigningRequest</property>
+        <property name="cdx:k8s:component:name">csr-slfvp</property>
+        <property name="rad:kbom:k8s:component:apiVersion">certificates.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="5961c27632339879" type="application">
+      <name>pool-37ti9u4a1-bpt78</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Lease</property>
+        <property name="cdx:k8s:component:name">pool-37ti9u4a1-bpt78</property>
+        <property name="rad:kbom:k8s:component:apiVersion">coordination.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-node-lease</property>
+      </properties>
+    </component>
+    <component bom-ref="8d0537d1171e381d" type="application">
+      <name>apiserver-3ndrtw7geu44i3hvuvsg3onrla</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Lease</property>
+        <property name="cdx:k8s:component:name">apiserver-3ndrtw7geu44i3hvuvsg3onrla</property>
+        <property name="rad:kbom:k8s:component:apiVersion">coordination.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="f17bfd44478b607d" type="application">
+      <name>cilium-operator-resource-lock</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Lease</property>
+        <property name="cdx:k8s:component:name">cilium-operator-resource-lock</property>
+        <property name="rad:kbom:k8s:component:apiVersion">coordination.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="ce74c1a5390582f9" type="application">
+      <name>cloud-controller-manager</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Lease</property>
+        <property name="cdx:k8s:component:name">cloud-controller-manager</property>
+        <property name="rad:kbom:k8s:component:apiVersion">coordination.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="337f7489244569f5" type="application">
+      <name>cluster-autoscaler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Lease</property>
+        <property name="cdx:k8s:component:name">cluster-autoscaler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">coordination.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="fcca4d15d003a5c5" type="application">
+      <name>kube-controller-manager</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Lease</property>
+        <property name="cdx:k8s:component:name">kube-controller-manager</property>
+        <property name="rad:kbom:k8s:component:apiVersion">coordination.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="e2a18b395641e197" type="application">
+      <name>kube-scheduler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Lease</property>
+        <property name="cdx:k8s:component:name">kube-scheduler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">coordination.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="f030c8998ac90926" type="application">
+      <name>kubelet-rubber-stamp-leader-election</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Lease</property>
+        <property name="cdx:k8s:component:name">kubelet-rubber-stamp-leader-election</property>
+        <property name="rad:kbom:k8s:component:apiVersion">coordination.k8s.io/v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="fcf7e39864f5be29" type="application">
+      <name>25435</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CiliumIdentity</property>
+        <property name="cdx:k8s:component:name">25435</property>
+        <property name="rad:kbom:k8s:component:apiVersion">cilium.io/v2</property>
+      </properties>
+    </component>
+    <component bom-ref="af26c1bdf22753dd" type="application">
+      <name>36778</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CiliumIdentity</property>
+        <property name="cdx:k8s:component:name">36778</property>
+        <property name="rad:kbom:k8s:component:apiVersion">cilium.io/v2</property>
+      </properties>
+    </component>
+    <component bom-ref="5c21d4cefe929f03" type="application">
+      <name>58065</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CiliumIdentity</property>
+        <property name="cdx:k8s:component:name">58065</property>
+        <property name="rad:kbom:k8s:component:apiVersion">cilium.io/v2</property>
+      </properties>
+    </component>
+    <component bom-ref="1cddf12e501fddb0" type="application">
+      <name>6589</name>
+      <properties>
+        <property name="cdx:k8s:component:type">CiliumIdentity</property>
+        <property name="cdx:k8s:component:name">6589</property>
+        <property name="rad:kbom:k8s:component:apiVersion">cilium.io/v2</property>
+      </properties>
+    </component>
+    <component bom-ref="28cda6f1bc931d86" type="application">
+      <name>pool-37ti9u4a1-bpt78</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Node</property>
+        <property name="cdx:k8s:component:name">pool-37ti9u4a1-bpt78</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0696c4bf098f21e6" type="application">
+      <name>kubernetes</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Service</property>
+        <property name="cdx:k8s:component:name">kubernetes</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">default</property>
+      </properties>
+    </component>
+    <component bom-ref="c6313b267c278254" type="application">
+      <name>hubble-peer</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Service</property>
+        <property name="cdx:k8s:component:name">hubble-peer</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="ab24b5811faafc1b" type="application">
+      <name>hubble-relay</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Service</property>
+        <property name="cdx:k8s:component:name">hubble-relay</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="4f5bf0ac8a27e762" type="application">
+      <name>hubble-ui</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Service</property>
+        <property name="cdx:k8s:component:name">hubble-ui</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="9d43327c04acb5cc" type="application">
+      <name>kube-dns</name>
+      <properties>
+        <property name="cdx:k8s:component:type">Service</property>
+        <property name="cdx:k8s:component:name">kube-dns</property>
+        <property name="rad:kbom:k8s:component:apiVersion">v1</property>
+        <property name="rad:kbom:k8s:component:namespace">kube-system</property>
+      </properties>
+    </component>
+    <component bom-ref="ce5e8c331a0539cb" type="application">
+      <name>cilium</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">cilium</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="9a440892e15d8fd4" type="application">
+      <name>cilium-operator</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">cilium-operator</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="265c00f983b98ab9" type="application">
+      <name>cluster-admin</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">cluster-admin</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="fdf1a514d16a9026" type="application">
+      <name>cluster-autoscaler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">cluster-autoscaler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="20165d241b9cee54" type="application">
+      <name>csi-do-attacher-binding</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">csi-do-attacher-binding</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="f3b588f5d4e74bcc" type="application">
+      <name>csi-do-node-driver-registrar-binding</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">csi-do-node-driver-registrar-binding</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="2d888ac63729d628" type="application">
+      <name>csi-do-provisioner-binding</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">csi-do-provisioner-binding</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="1e70eea1c73a1cf8" type="application">
+      <name>csi-do-resizer-binding</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">csi-do-resizer-binding</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="77932764e84bc958" type="application">
+      <name>csi-do-snapshotter-binding</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">csi-do-snapshotter-binding</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="62b1db1fe3d8d3c2" type="application">
+      <name>do-agent</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">do-agent</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="34c281946c1b6ce6" type="application">
+      <name>do:biller:cluster-view-only</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">do:biller:cluster-view-only</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="89c2f2f16d813d8d" type="application">
+      <name>do:modifier</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">do:modifier</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="54ccbb24f876725b" type="application">
+      <name>dosecret-operator</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">dosecret-operator</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="162aeb9f9c325559" type="application">
+      <name>hubble-ui</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">hubble-ui</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="038a99ee311c6d85" type="application">
+      <name>k8saas:credentials:bootstrapper</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">k8saas:credentials:bootstrapper</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="eda7c6104415eca1" type="application">
+      <name>k8saas:credentials:cluster-admin</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">k8saas:credentials:cluster-admin</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="89794c4763e999dd" type="application">
+      <name>k8saas:credentials:cluster-support</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">k8saas:credentials:cluster-support</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="26033ad5c7c36f3a" type="application">
+      <name>k8saas:credentials:cluster-support-view</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">k8saas:credentials:cluster-support-view</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0b9d3e5a5058caae" type="application">
+      <name>k8saas:nodes:ssl-auto-approve</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">k8saas:nodes:ssl-auto-approve</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="8d99473f92f8b738" type="application">
+      <name>k8saas:nodes:ssl-auto-renew</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">k8saas:nodes:ssl-auto-renew</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b931aa61b7554c3e" type="application">
+      <name>kube-proxy</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">kube-proxy</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="1bda4045bffaa2a8" type="application">
+      <name>kubelet</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">kubelet</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="57df4595fca7befd" type="application">
+      <name>kubelet-rubber-stamp</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">kubelet-rubber-stamp</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="d938d06495c8eca7" type="application">
+      <name>snapshot-controller-binding</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">snapshot-controller-binding</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="171f28dc9d219992" type="application">
+      <name>snapshot-validation</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">snapshot-validation</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="7b674244e73c4b6f" type="application">
+      <name>system:basic-user</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:basic-user</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="5bc15f3d17a80619" type="application">
+      <name>system:cloud-controller-manager</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:cloud-controller-manager</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="31001665c41bad42" type="application">
+      <name>system:controller:attachdetach-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:attachdetach-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="f466c7198cd09d11" type="application">
+      <name>system:controller:certificate-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:certificate-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="9cb304f1211c0097" type="application">
+      <name>system:controller:clusterrole-aggregation-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:clusterrole-aggregation-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="d48e0d4d0ded2766" type="application">
+      <name>system:controller:cronjob-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:cronjob-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="06bf65b15c4ee9d3" type="application">
+      <name>system:controller:daemon-set-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:daemon-set-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="91ac494dc6b93a9e" type="application">
+      <name>system:controller:deployment-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:deployment-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="1a9124ba89a64c46" type="application">
+      <name>system:controller:disruption-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:disruption-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="a591c827640bbd22" type="application">
+      <name>system:controller:endpoint-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:endpoint-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="da2bbdf6843233c2" type="application">
+      <name>system:controller:endpointslice-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:endpointslice-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="d282eb5515289052" type="application">
+      <name>system:controller:endpointslicemirroring-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:endpointslicemirroring-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="a73b720c9a028b25" type="application">
+      <name>system:controller:ephemeral-volume-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:ephemeral-volume-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="733e3acd7bf35212" type="application">
+      <name>system:controller:expand-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:expand-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="83d00c4842a017e5" type="application">
+      <name>system:controller:generic-garbage-collector</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:generic-garbage-collector</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="124327f6f8bf0f82" type="application">
+      <name>system:controller:horizontal-pod-autoscaler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:horizontal-pod-autoscaler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="8bc9cb97f9bdeb04" type="application">
+      <name>system:controller:job-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:job-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0b31e2db3ca06eaf" type="application">
+      <name>system:controller:legacy-service-account-token-cleaner</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:legacy-service-account-token-cleaner</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="9394bda5fae5993e" type="application">
+      <name>system:controller:namespace-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:namespace-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="7509f40bcb9b4834" type="application">
+      <name>system:controller:node-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:node-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="a737f0ab17721637" type="application">
+      <name>system:controller:persistent-volume-binder</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:persistent-volume-binder</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="8e3cfae821247dc4" type="application">
+      <name>system:controller:pod-garbage-collector</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:pod-garbage-collector</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="ebf75fbbcd71bf7e" type="application">
+      <name>system:controller:pv-protection-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:pv-protection-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="90c7582e5f6f22e7" type="application">
+      <name>system:controller:pvc-protection-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:pvc-protection-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b0a95d9de0d9ac5b" type="application">
+      <name>system:controller:replicaset-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:replicaset-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="354d9ec2308eebc9" type="application">
+      <name>system:controller:replication-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:replication-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="82300cd72c2914da" type="application">
+      <name>system:controller:resourcequota-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:resourcequota-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="8b4825f40232142a" type="application">
+      <name>system:controller:root-ca-cert-publisher</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:root-ca-cert-publisher</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="27e2a41b3388e90e" type="application">
+      <name>system:controller:route-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:route-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="f503770afdcc4e7f" type="application">
+      <name>system:controller:service-account-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:service-account-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="308939a738f35649" type="application">
+      <name>system:controller:service-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:service-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="8ecd89fbc91f856d" type="application">
+      <name>system:controller:statefulset-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:statefulset-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="c361424194fa1170" type="application">
+      <name>system:controller:ttl-after-finished-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:ttl-after-finished-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="c59e04b6dd04ece9" type="application">
+      <name>system:controller:ttl-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:ttl-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0a99fdc081ca77e9" type="application">
+      <name>system:controller:validatingadmissionpolicy-status-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:controller:validatingadmissionpolicy-status-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="9c5c3840948da329" type="application">
+      <name>system:coredns</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:coredns</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="14ff49a912e3bdbd" type="application">
+      <name>system:discovery</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:discovery</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b64d0a164430564b" type="application">
+      <name>system:doks-fluentbit</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:doks-fluentbit</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="c9d986b0680a0d76" type="application">
+      <name>system:konnectivity-server</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:konnectivity-server</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="5ad1f104590a9392" type="application">
+      <name>system:kube-controller-manager</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:kube-controller-manager</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="4b267ba72c3e2f46" type="application">
+      <name>system:kube-dns</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:kube-dns</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="656e6d0eb8c5404c" type="application">
+      <name>system:kube-scheduler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:kube-scheduler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="933b0b6ba7a88521" type="application">
+      <name>system:monitoring</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:monitoring</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="3795c31cef363c34" type="application">
+      <name>system:node</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:node</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="02c2caea869f4526" type="application">
+      <name>system:node-proxier</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:node-proxier</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="0751c4ae149a262c" type="application">
+      <name>system:public-info-viewer</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:public-info-viewer</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="9625219389ce547e" type="application">
+      <name>system:service-account-issuer-discovery</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:service-account-issuer-discovery</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="fb7c737d7b0222a5" type="application">
+      <name>system:volume-scheduler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">ClusterRoleBinding</property>
+        <property name="cdx:k8s:component:name">system:volume-scheduler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">rbac.authorization.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="6e0fdfa7cf54d093" type="application">
+      <name>catch-all</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">catch-all</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="42ddf1797f556f46" type="application">
+      <name>endpoint-controller</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">endpoint-controller</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="44e5dcddb766fab1" type="application">
+      <name>exempt</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">exempt</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="70538b1a576ef29e" type="application">
+      <name>global-default</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">global-default</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="1218c9552647982a" type="application">
+      <name>kube-controller-manager</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">kube-controller-manager</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="51836f627d641984" type="application">
+      <name>kube-scheduler</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">kube-scheduler</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="f2e57fd5d14fa275" type="application">
+      <name>kube-system-service-accounts</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">kube-system-service-accounts</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="f8d822e1f23533e1" type="application">
+      <name>probes</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">probes</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b72516df615715ef" type="application">
+      <name>service-accounts</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">service-accounts</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="b21274ae1465afb6" type="application">
+      <name>system-leader-election</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">system-leader-election</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="046abecbfc546595" type="application">
+      <name>system-node-high</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">system-node-high</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="e5721f8ee816ea79" type="application">
+      <name>system-nodes</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">system-nodes</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="549961da9d4a7093" type="application">
+      <name>workload-leader-election</name>
+      <properties>
+        <property name="cdx:k8s:component:type">FlowSchema</property>
+        <property name="cdx:k8s:component:name">workload-leader-election</property>
+        <property name="rad:kbom:k8s:component:apiVersion">flowcontrol.apiserver.k8s.io/v1</property>
+      </properties>
+    </component>
+    <component bom-ref="c0053b7e8c99f8b9" type="application">
+      <name>do-block-storage</name>
+      <properties>
+        <property name="cdx:k8s:component:type">VolumeSnapshotClass</property>
+        <property name="cdx:k8s:component:name">do-block-storage</property>
+        <property name="rad:kbom:k8s:component:apiVersion">snapshot.storage.k8s.io/v1</property>
+      </properties>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="pkg:k8s/k8s.io%2Fkubernetes@1.30.2">
+      <dependency ref="fcb5d3005f98081f"></dependency>
+      <dependency ref="pkg:oci/cilium@sha256%3A0a1bcd2859c6d18d60dba6650cca8c707101716a3e47b126679040cbd621c031?repository_url=docker.io%2Fcilium%2Fcilium&amp;tag=v1.14.10"></dependency>
+      <dependency ref="pkg:oci/coredns@sha256%3A1eeb4c7316bacb1d4c8ead65571cd92dd21e27359f0d4917f1a5822a73b75db1?repository_url=docker.io%2Fcoredns%2Fcoredns&amp;tag=1.11.1"></dependency>
+      <dependency ref="pkg:oci/cpbridge@sha256%3A04ad16d1feb5d794dcdf9bc07b8eea26e4b60b72ec7f97c2008b350c5a51b10e?repository_url=docker.io%2Fdigitalocean%2Fcpbridge&amp;tag=1.26.0"></dependency>
+      <dependency ref="pkg:oci/csi-node-driver-registrar@sha256%3Af25af73ee708ff9c82595ae99493cdef9295bd96953366cddf36305f82555dac?repository_url=registry.k8s.io%2Fsig-storage%2Fcsi-node-driver-registrar&amp;tag=v2.10.1"></dependency>
+      <dependency ref="pkg:oci/do-agent@sha256%3A3e7fd2623ffce0bce5224d7c220564234a77bf9b9f56cc5d5321203191a8a98e?repository_url=docker.io%2Fdigitalocean%2Fdo-agent&amp;tag=3.16.7"></dependency>
+      <dependency ref="pkg:oci/do-csi-plugin@sha256%3A308ed578f2f94d982a0023db326dd9adeededf73a80736c06219235e3b1a8113?repository_url=docker.io%2Fdigitalocean%2Fdo-csi-plugin&amp;tag=v4.11.0"></dependency>
+      <dependency ref="pkg:oci/hubble-relay@sha256%3Ac156c4fc2da520d2876142ea17490440b95431a1be755d2050e72115a495cfd0?repository_url=quay.io%2Fcilium%2Fhubble-relay&amp;tag=v1.14.10"></dependency>
+      <dependency ref="pkg:oci/hubble-ui-backend@sha256%3A1e7657d997c5a48253bb8dc91ecee75b63018d16ff5e5797e5af367336bc8803?repository_url=quay.io%2Fcilium%2Fhubble-ui-backend&amp;tag=v0.13.0"></dependency>
+      <dependency ref="pkg:oci/hubble-ui@sha256%3A7d663dc16538dd6e29061abd1047013a645e6e69c115e008bee9ea9fef9a6666?repository_url=quay.io%2Fcilium%2Fhubble-ui&amp;tag=v0.13.0"></dependency>
+      <dependency ref="pkg:oci/kube-proxy@sha256%3A8a44c6e094af3dea3de57fa967e201608a358a3bd8b4e3f31ab905bbe4108aec?repository_url=registry.k8s.io%2Fkube-proxy&amp;tag=v1.30.2"></dependency>
+      <dependency ref="pkg:oci/kubectl@sha256%3A4f74249f971f8ca158a03eaa0c8e7741a2a750fe53525dc69497cf23584df04a?repository_url=docker.io%2Fbitnami%2Fkubectl&amp;tag=1.30"></dependency>
+      <dependency ref="pkg:oci/proxy-agent@sha256%3A9a44a615d53d20d1ea5dbf407a65146e2a5263dd039b48e7f238b60ce063d3eb?repository_url=registry.k8s.io%2Fkas-network-proxy%2Fproxy-agent&amp;tag=v0.30.2"></dependency>
+    </dependency>
+  </dependencies>
+</bom>
