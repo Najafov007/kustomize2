@@ -1,0 +1,248 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:276396b7-128f-4b8c-ac39-fca0611ff964",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-08-21T10:42:43+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.54.1"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:k8s/k8s.io%2Fkubernetes@1.30.2",
+      "type": "platform",
+      "name": "k8s.io/kubernetes",
+      "version": "1.30.2",
+      "purl": "pkg:k8s/k8s.io%2Fkubernetes@1.30.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "do-nyc3-k8s-1"
+        },
+        {
+          "name": "aquasecurity:trivy:resource:Type",
+          "value": "cluster"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "21a985ee-86bb-4603-97a2-5cd988a20de5",
+      "type": "application",
+      "name": "kube-dns",
+      "purl": "pkg:k8s/kube-dns",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "coredns-85f59d8784-7x4w8"
+        }
+      ]
+    },
+    {
+      "bom-ref": "72f43a33-1a36-4b00-b924-99d80aa2c076",
+      "type": "application",
+      "name": "kube-dns",
+      "purl": "pkg:k8s/kube-dns",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "coredns-85f59d8784-qxxfm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "a6c8988a-d441-47c8-bac8-602429f11923",
+      "type": "platform",
+      "name": "pool-37ti9u4a1-bpt78",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Architecture",
+          "value": "amd64"
+        },
+        {
+          "name": "aquasecurity:trivy:HostName",
+          "value": "pool-37ti9u4a1-bpt78"
+        },
+        {
+          "name": "aquasecurity:trivy:KernelVersion",
+          "value": "6.1.0-22-amd64"
+        },
+        {
+          "name": "aquasecurity:trivy:NodeRole",
+          "value": "worker"
+        },
+        {
+          "name": "aquasecurity:trivy:OperatingSystem",
+          "value": "linux"
+        },
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "pool-37ti9u4a1-bpt78"
+        },
+        {
+          "name": "aquasecurity:trivy:resource:Type",
+          "value": "node"
+        }
+      ]
+    },
+    {
+      "bom-ref": "e9ba8760-1b00-431e-9d03-dd07bfad2708",
+      "type": "operating-system",
+      "name": "debian gnu/linux",
+      "version": "12",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "os-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "debian gnu/linux"
+        }
+      ]
+    },
+    {
+      "bom-ref": "f14c1c6b-8cb5-4f90-8d2b-456104e08c62",
+      "type": "application",
+      "name": "node-core-components",
+      "properties": []
+    },
+    {
+      "bom-ref": "pkg:golang/github.com%2Fcontainerd%2Fcontainerd@1.6.31",
+      "type": "application",
+      "name": "github.com/containerd/containerd",
+      "version": "1.6.31",
+      "purl": "pkg:golang/github.com%2Fcontainerd%2Fcontainerd@1.6.31",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "github.com/containerd/containerd"
+        },
+        {
+          "name": "aquasecurity:trivy:resource:Type",
+          "value": "node"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:k8s/cilium",
+      "type": "application",
+      "name": "cilium",
+      "purl": "pkg:k8s/cilium",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "cilium-7zt6x"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:k8s/hubble-relay",
+      "type": "application",
+      "name": "hubble-relay",
+      "purl": "pkg:k8s/hubble-relay",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "hubble-relay-74686df4df-pzsfh"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:k8s/hubble-ui",
+      "type": "application",
+      "name": "hubble-ui",
+      "purl": "pkg:k8s/hubble-ui",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "hubble-ui-86cc69bddc-njx9s"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:k8s/k8s.io%2Fkube-proxy",
+      "type": "application",
+      "name": "k8s.io/kube-proxy",
+      "purl": "pkg:k8s/k8s.io%2Fkube-proxy",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "kube-proxy-5tprt"
+        },
+        {
+          "name": "aquasecurity:trivy:resource:Type",
+          "value": "node"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:k8s/k8s.io%2Fkubelet@1.30.2",
+      "type": "application",
+      "name": "k8s.io/kubelet",
+      "version": "1.30.2",
+      "purl": "pkg:k8s/k8s.io%2Fkubelet@1.30.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "k8s.io/kubelet"
+        },
+        {
+          "name": "aquasecurity:trivy:resource:Type",
+          "value": "node"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:k8s/konnectivity-agent",
+      "type": "application",
+      "name": "konnectivity-agent",
+      "purl": "pkg:k8s/konnectivity-agent",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:resource:Name",
+          "value": "konnectivity-agent-q8v5f"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "a6c8988a-d441-47c8-bac8-602429f11923",
+      "dependsOn": [
+        "e9ba8760-1b00-431e-9d03-dd07bfad2708",
+        "f14c1c6b-8cb5-4f90-8d2b-456104e08c62"
+      ]
+    },
+    {
+      "ref": "f14c1c6b-8cb5-4f90-8d2b-456104e08c62",
+      "dependsOn": [
+        "pkg:golang/github.com%2Fcontainerd%2Fcontainerd@1.6.31",
+        "pkg:k8s/k8s.io%2Fkubelet@1.30.2"
+      ]
+    },
+    {
+      "ref": "pkg:k8s/k8s.io%2Fkubernetes@1.30.2",
+      "dependsOn": [
+        "21a985ee-86bb-4603-97a2-5cd988a20de5",
+        "72f43a33-1a36-4b00-b924-99d80aa2c076",
+        "a6c8988a-d441-47c8-bac8-602429f11923",
+        "pkg:k8s/cilium",
+        "pkg:k8s/hubble-relay",
+        "pkg:k8s/hubble-ui",
+        "pkg:k8s/k8s.io%2Fkube-proxy",
+        "pkg:k8s/konnectivity-agent"
+      ]
+    }
+  ],
+  "vulnerabilities": []
+}
